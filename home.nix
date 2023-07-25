@@ -7,6 +7,9 @@
   programs.starship.enable = true;
   programs.starship.settings = {
     container.disabled = true;
+    package.disabled = true;
+    python.disabled = true;
+    docker_context.disabled = true;
   };
 
   programs.fish = {
