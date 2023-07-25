@@ -1,0 +1,9 @@
+{
+    "editor.formatOnSave": true,
+    "nix.formatterPath": [
+        "nix",
+        "fmt",
+        "--",
+        "-"
+    ],
+}
