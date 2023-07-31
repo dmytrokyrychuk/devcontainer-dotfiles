@@ -18,4 +18,9 @@
       set fish_greeting  # Disable greeting
     '';
   };
+
+  programs.kakoune.enable = true;
+  # Use defaultEditor after 23.11 release.
+  # programs.kakoune.defaultEditor = true;
+  home.sessionVariables.EDITOR = "kak";
 }
