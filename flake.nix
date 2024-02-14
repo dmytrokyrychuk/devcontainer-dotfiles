@@ -15,7 +15,7 @@
   } @ inputs: let
     system = "x86_64-linux";
     pkgs = nixpkgs.legacyPackages.${system}.pkgs;
-    getVar = varName: pkgs.lib.removeSuffix "\n" (builtins.readFile ./.flake-var-${varName});
+    vars = builtins.fromTOML (builtins.readFile ./flake-vars.toml);
   in {
     defaultPackage.x86_64-linux = home-manager.defaultPackage.${system};
 
@@ -28,8 +28,8 @@
           ./home.nix
           {
             home = {
-              homeDirectory = getVar "home";
-              username = getVar "user";
+              homeDirectory = vars.home;
+              username = vars.user;
               stateVersion = "23.05";
             };
           }

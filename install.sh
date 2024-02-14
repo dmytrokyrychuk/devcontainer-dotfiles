@@ -3,8 +3,8 @@ dir=$(cd -P -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd -P)
 cd -P "$dir"
 set -e
 
-echo $HOME > ./.flake-var-home
-echo $USER > ./.flake-var-user
+echo "user = '$USER'" > ./flake-vars.toml
+echo "home = '$HOME'" >> ./flake-vars.toml
 
 if ! command -v nix &> /dev/null
 then
