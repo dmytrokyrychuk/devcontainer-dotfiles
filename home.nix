@@ -20,6 +20,9 @@
     '';
   };
 
+  # You must manually include this file in your main git config file.
+  xdg.configFile."git/extra-config".source = ./.config/git/extra-config;
+
   programs.kakoune.enable = true;
   # Use defaultEditor after 23.11 release.
   # programs.kakoune.defaultEditor = true;
