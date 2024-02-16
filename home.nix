@@ -3,6 +3,7 @@
   home.packages = [
   ];
 
+  programs.zoxide.enable = true;
   programs.fzf.enable = true;
   programs.starship.enable = true;
   programs.starship.settings = {
